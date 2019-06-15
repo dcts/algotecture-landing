@@ -1,1 +1,79 @@
-<h1>Pages#home</h1>
+<div class="main-container">
+  <!-- <div id="side-nav" style="visibility: hidden;"></div> -->
+
+  <div id="banner">
+    <div id="search-flex">
+      <div id="search-input-container">
+        <input id="search-input" type="text">
+        <%= image_tag("search.svg", class: "search-icon") %>
+      </div>
+    </div>
+  </div>
+  <div id="info-cards-container">
+    <div id="main-info-card">
+      <div class="grid-item card-1"></div>
+      <div class="card-2"></div>
+      <div class="card-3"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  body {
+    background: #DDE8F9;
+  }
+  .main-container {
+    border: 2px solid red;
+    height: 100vh;
+  }
+  #side-nav {
+    border: 3px solid orange;
+    width: 80px;
+    height: 100vh;
+  }
+  #banner {
+    border: 2px solid green;
+    height: 550px;
+  }
+  #search-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #search-input {
+    width: 380px;
+    margin-top: 25px;
+    font-size: 22px;
+    border: none;
+    padding: 10px 20px;
+    padding-left: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(15,15,15,0.1);
+  }
+  #search-input-container {
+    position: relative;
+  }
+  img.search-icon {
+    width: 27px;
+    position: absolute;
+    top: 39px;
+    left: 15px;
+  }
+  #info-cards-container {
+    border: 3px solid yellow;
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 90px;
+  }
+  #main-info-card {
+    width: 1100px;
+    height: 170px;
+    border: 3px solid blue;
+    position: absolute;
+    top: -95px;
+  }
+
+</style>
