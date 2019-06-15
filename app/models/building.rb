@@ -1,0 +1,3 @@
+class Building < ApplicationRecord
+
+end
