@@ -1,5 +1,12 @@
 class PagesController < ApplicationController
   def home
-    @buildings = Building.all
+    @buildings = Building.where.not(latitude: nil, longitude: nil)
+
+    @markers = @buildings.map do |building|
+      {
+        lat: building.latitude,
+        lng: building.longitude
+      }
+    end
   end
 end
