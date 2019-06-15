@@ -1,0 +1,29 @@
+<!-- TAKES ONE PARAMETER -->
+<!-- buildings: array of buildings -->
+<!-- renders a bootstrap table -->
+<table class="table table-sm">
+  <tr>
+    <th>image</th>
+    <th>id</th>
+    <th>title</th>
+    <th>description</th>
+    <th>location</th>
+    <th>latitude</th>
+    <th>longitude</th>
+    <th>created_at</th>
+    <th>updated_at</th>
+  </tr>
+  <% buildings.each do |building| %>
+    <tr>
+      <td></td>
+      <td><%= building.id %></td>
+      <td><%= building.title %></td>
+      <td><%= building.description %></td>
+      <td><%= building.location %></td>
+      <td><%= building.latitude %></td>
+      <td><%= building.longitude %></td>
+      <td><%= building.created_at %></td>
+      <td><%= building.updated_at %></td>
+    </tr>
+  <% end %>
+</table>
