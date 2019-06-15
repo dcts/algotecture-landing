@@ -1,1 +1,105 @@
-<h1>Pages#home</h1>
+<div class="main-container">
+  <div id="side-nav">
+
+  </div>
+
+  <div id="banner">
+    <div id="search-flex">
+      <div id="search-input-container">
+        <input id="search-input" type="text">
+        <%= image_tag("search.svg", class: "search-icon") %>
+      </div>
+    </div>
+  </div>
+  <div id="info-cards-container">
+    <div id="main-info-card"></div>
+    <div id="info-cards-flex">
+      <div class="info-card"></div>
+      <div class="info-card"></div>
+      <div class="info-card"></div>
+      <div class="info-card"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  body {
+    background: #e6effc;
+  }
+  .main-container {
+    /*border: 2px solid red;*/
+    position: relative;
+    /*height: 100vh;*/
+  }
+  #side-nav {
+    /*border: 3px solid orange;*/
+    width: 65px;
+    height: 100%;
+    position: absolute;
+    background-color: #2E2672;
+  }
+  #banner {
+    /*border: 2px solid grey;*/
+    background-color: rgb(251,251,251);
+    height: 550px;
+  }
+  #search-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #search-input {
+    width: 380px;
+    margin-top: 25px;
+    font-size: 22px;
+    border: none;
+    padding: 10px 20px;
+    padding-left: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(15,15,15,0.1);
+  }
+  #search-input-container {
+    position: relative;
+  }
+  img.search-icon {
+    width: 27px;
+    position: absolute;
+    top: 39px;
+    left: 15px;
+  }
+  #info-cards-container {
+    /*border: 3px solid yellow;*/
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 90px;
+  }
+  #main-info-card {
+    /*border: 3px solid white;*/
+    background: white;
+    width: 1100px;
+    height: 190px;
+    position: absolute;
+    top: -95px;
+    border-top: 5px solid #9ea4b6;
+    border-radius: 0 0 9px 9px;
+    box-shadow: 0 0 20px rgba(15,15,15,0.1);
+  }
+  #info-cards-flex {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+  }
+  .info-card {
+    height: 320px;
+    width: 23%;
+    margin-top: 30px;
+    background-color: white;
+    border-top: 5px solid #3695bd;
+    border-radius: 0 0 9px 9px;
+    box-shadow: 0 0 20px rgba(15,15,15,0.1);
+  }
+
+</style>
