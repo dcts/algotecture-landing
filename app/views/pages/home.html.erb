@@ -1,11 +1,14 @@
 <div class="main-container">
-  <!-- <div id="side-nav"></div> -->
-
-  <div id="banner-1">
+  <div id="search-flex">
+    <div id="search-input-container">
+      <input id="search-input" type="text">
+      <%= image_tag("search.svg", class: "search-icon") %>
+    </div>
   </div>
+  <div id="side-nav"></div>
+
   <div id="banner-2">
     <div id="map" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-
     </div>
   </div>
   <div id="info-cards-container">
@@ -29,28 +32,27 @@
     width: 100%;
     z-index: 0;
   }
-  #banner-1 {
+  /*#banner-1 {
     border: 3px solid green;
     height: 400px;
     background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: cover;
     background-position: center center;
-
-  }
+  }*/
   #banner-2 {
-    border: 2px solid grey;
+    /*border: 2px solid grey;*/
     background-color: rgb(251,251,251);
   }
   body {
     background: #e6effc;
   }
   .main-container {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
     /*height: 100vh;*/
   }
   #side-nav {
-    border: 3px solid orange;
+    /*border: 3px solid orange;*/
     width: 65px;
     height: 100%;
     position: absolute;
@@ -58,14 +60,16 @@
     z-index: 2;
   }
   #search-flex {
-    height: 80px;
-    background-color: transparent;
+    height: 100px;
+    position: absolute;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 35vw;
   }
   #search-input {
-    width: 380px;
+    width: 30vw;
     font-size: 22px;
     border: none;
     padding: 10px 20px;
@@ -83,14 +87,14 @@
     left: 15px;
   }
   #info-cards-container {
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
     width: 1100px;
     margin: 0 auto;
     position: relative;
     padding-top: 90px;
   }
   #main-info-card {
-    border: 3px solid white;
+    /*border: 3px solid white;*/
     background: white;
     width: 1100px;
     height: 190px;
