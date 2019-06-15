@@ -5,7 +5,8 @@ class PagesController < ApplicationController
     @markers = @buildings.map do |building|
       {
         lat: building.latitude,
-        lng: building.longitude
+        lng: building.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { building: building })
       }
     end
   end
